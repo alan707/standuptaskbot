@@ -134,6 +134,9 @@ class Conversation:
         elif msg.lower().startswith("publish"):
             self.publish()
             self.current_status = self.WaitingForStart
+        elif msg.lower().startswith("preview"):
+            self.preview()
+            self.render_task_list()
 
         elif msg.startswith("-"):
             lines = msg.strip().split("\n")
