@@ -136,7 +136,7 @@ class Conversation:
             self.current_status = self.WaitingForStart
         elif msg.lower().startswith("preview"):
             self.preview()
-            self.render_task_list()
+            self.render_task_list(presentation=True)
 
         elif msg.startswith("-"):
             lines = msg.strip().split("\n")
